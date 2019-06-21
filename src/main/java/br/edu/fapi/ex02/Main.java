@@ -5,7 +5,7 @@
  */
 package br.edu.fapi.ex02;
 
-import java.util.Scanner;
+
 
 /**
  *
@@ -13,18 +13,8 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args){
-        CheckImplement check;
-        String nome = null;
-        Scanner ler = new Scanner(System.in);
+        Nome nome = new Nome();
         
-        try{
-          System.out.println("Olá, digite um nome: ");
-          nome = ler.nextLine();
-          check = new Check();
-          check.verificador(nome);
-          System.out.println("Você passou desta vez.");
-        }catch(NomeInvalidoException e){
-            System.out.println("Nome com erro: " + nome);
-        }
+        nome.lerNome();
     }
 }
